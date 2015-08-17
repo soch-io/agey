@@ -1,0 +1,9 @@
+include ./includes/ascii.txt
+doctype html
+include ./includes/header.jade
+body
+	#react-app
+		if (reactString)
+			| !{reactString}
+	include ./includes/footer.jade
+

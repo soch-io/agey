@@ -1,0 +1,43 @@
+head
+	meta(charset="utf-8")
+	
+	//- Set the viewport width to device width for mobile
+	meta(name="viewport", content="width=device-width")
+	meta(name="viewport", content="width=device-width,user-scalable=no")
+	
+	title StudioStays
+	//Basic Meta
+	meta( name="description", content="")
+	meta( name="keywords", content="")
+		
+	//Facebook Meta
+	meta(property="og:type", 		content="website" )
+	meta(property="og:title", 		content="" )
+	meta(property="og:site_name", 	content="" )
+	meta(property="og:description", content="")
+	meta(property="og:image", 		content="" )
+	meta(property="og:image:type", 	content="image/png")
+	meta(property="og:image:width", content="1200")
+	meta(property="og:image:height",content="1200")
+	meta(property="og:url", 		content="" )
+	
+	//schema.org
+	script(type="application/ld+json")
+		include schema-1.json
+	script(type="application/ld+json")
+		include schema-2.json
+	//google analytics
+	include analytics
+	//Critical above the fold css
+	style
+		include critical.css
+	
+	//async loading of css
+	if (!static)
+		script#finalcss
+			- cssPath = '/css/min/final.min.css'
+	else
+		script#finalcss
+			- cssPath = 'css/final.min.css'
+	include loadcss
+		

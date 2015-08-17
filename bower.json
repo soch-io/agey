@@ -1,0 +1,45 @@
+{
+  "name": "sochtechnologies",
+  "version": "0.0.0",
+  "homepage": "https://github.com/pagrawl3/sochtechnologies",
+  "authors": [
+    "pagrawl3 <mail@prath.am>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "modernizr": "~2.8.3",
+    "jquery": "~2.1.4",
+    "gsap": "~1.17.0",
+    "ScrollMagic": "~2.0.5",
+    "picturefill": "~2.3.1",
+    "webfontloader": "~1.6.6"
+  },
+  "overrides": {
+    "modernizr": {
+      "main": "modernizr.js"
+    },
+    "webfontloader": {
+      "main": "webfontloader.js"
+    },
+    "gsap": {
+      "main": [
+        "./src/uncompressed/jquery.gsap.js",
+        "./src/uncompressed/plugins/ScrollToPlugin.js",
+        "./src/uncompressed/TweenMax.js"
+      ]
+    },
+    "ScrollMagic": {
+      "main": [
+        "scrollmagic/uncompressed/ScrollMagic.js",
+        "scrollmagic/uncompressed/plugins/animation.gsap.js"
+      ]
+    }
+  }
+}

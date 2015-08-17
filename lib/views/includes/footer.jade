@@ -1,0 +1,9 @@
+if (production)
+	script(type='text/javascript', src="/js/build/final.min.js" async)
+else if (static)
+	script(type='text/javascript', src="js/final.min.js" async)
+else
+	script(type='text/javascript', src="/js/pre.js")
+	script(type='text/javascript', src="/js/vendor.js")
+	script(type='text/javascript', src="/js/bundle.react.js")
+	script(type='text/javascript', src="/js/personal.js")
